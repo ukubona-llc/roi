@@ -66,7 +66,7 @@ footer{max-width:800px;margin:0 auto;padding:0 20px 40px;color:var(--mute);font-
 <button class="ib" id="tb" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg></button>
 <button class="ib" id="wb" type="button" aria-label="Open the page grid" aria-expanded="false" aria-controls="pop"><span class="waf"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button>
-<nav id="pop" aria-label="Pages" hidden><a class="tile" data-p="roi" href="#roi"><b>ROI</b><span>Return</span></a><a class="tile" data-p="i" href="#i"><b>I</b><span>Routing</span></a><a class="tile" data-p="ii" href="#ii"><b>II</b><span>Resemblance</span></a><a class="tile" data-p="iii" href="#iii"><b>III</b><span>Gemini, Claude</span></a><a class="tile" href="https://ukubona-llc.github.io/parang/"><b>P</b><span>Parang, opens site</span></a></nav>
+<nav id="pop" aria-label="Pages" hidden><a class="tile" data-p="roi" href="#roi"><b>ROI</b><span>Return</span></a><a class="tile" data-p="i" href="#i"><b>I</b><span>Routing</span></a><a class="tile" data-p="ii" href="#ii"><b>II</b><span>Resemblance</span></a><a class="tile" data-p="iii" href="#iii"><b>III</b><span>Gemini, Claude</span></a><a class="tile" data-p="marley" href="#marley"><b>M</b><span>Future: Marley</span></a><a class="tile" href="https://ukubona-llc.github.io/parang/"><b>P</b><span>Parang, opens site</span></a></nav>
 </header>
 <main><section class="panel" data-p="roi"><h1 id="roi">Return on investment</h1>
 <p class="lead">I paid for this by torturing my dopamine-marinated brain with salience in everything I saw for two to three years, under one constraint: whatever I kept had to compress into a pentadic operator. This page is the return.</p>
@@ -332,7 +332,41 @@ H_2:\quad \text{Inheritance / Transmission}
 <p>$$\operatorname{Resemblance}(A_i,A_j) \not\Rightarrow \Gamma_i \rightarrow A_j$$</p>
 <p><strong>3. The evidence is asymmetric, so the confidence should be too.</strong> Parang's chain has named carriers: people, instruments, a sea crossing. Latin and Caribbean participation in early hip-hop is documented as well. A flamenco ancestry for the progression $i \rightarrow \flat III \rightarrow \flat II \rightarrow i$ has no carrier yet. In V's terms, the resemblance observation carries high evidence weight and the transmission claim carries low evidence weight today.</p>
 <p>My answer to Gemini: II for parang, III operating on II for hip-hop, and the Phrygian progression sits at the seam between them, which is why it cannot be assigned to either route yet. A carrier would move it: a sampled record, a named performer, a repertoire, a technique. Find one and $H_2$ gains weight. Find the same vocabulary recurring where there was no contact and $H_1$ does.</p>
-<p>--Claude</p></section></main>
+<p>--Claude</p></section><section class="panel" data-p="marley" hidden><a id="marley"></a><h1 id="future-project-bob-marley">Future project: Bob Marley</h1>
+<p><em>Noted 12 November 2026</em></p>
+<p>A future project should investigate this cadence in Bob Marley. My hypothesis is that Marley's cadence ends on the Phrygian minor, where flamenco ends on the Phrygian dominant, a major chord. I have not analyzed any Marley recordings, so this is a claim to test, not a finding.</p>
+<p>If it holds, Marley aligns with the Caribbean sources of this session, hip-hop and parang, rather than with flamenco on this one feature. It would also fit the minor close of the progression $i \rightarrow \flat III \rightarrow \flat II \rightarrow i$ that opened the session.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>The question for Marley</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Interior</td>
+<td>Which cadence exactly is claimed, which chord closes it, and in which songs</td>
+</tr>
+<tr>
+<td>II. Kin</td>
+<td>What has already been transcribed and published about Marley's harmony</td>
+</tr>
+<tr>
+<td>III. Constructal</td>
+<td>What must be acquired: audio analysis of the recordings, and a search for carriers</td>
+</tr>
+<tr>
+<td>IV. Social</td>
+<td>Which musicologists, Jamaican musicians and Caribbean traditions can confirm or challenge the reading</td>
+</tr>
+<tr>
+<td>V. Weights</td>
+<td>How much evidence weight a minor close earns over a major one, and what would move it</td>
+</tr>
+</tbody>
+</table></div>
+<p>The discipline of II holds here too. A minor close resembling the Caribbean sources does not establish a shared ancestry, and a missing link to flamenco does not establish convergence. Carriers on the Jamaican side, such as records, radio, performers and repertoire, are to be investigated rather than assumed. Find one and $H_2$ gains weight. Find the same close recurring where there was no contact and $H_1$ does.</p></section></main>
 <footer><hr><p>Reference architecture: <a href="https://ukubona-llc.github.io/parang/">Ukubona · Parang</a> · <a href="https://ukubona-llc.github.io/parang/#epi-top">Epilogue</a>. Machine-generated commentary is preserved verbatim. Hosted at <a href="https://ukubona-llc.github.io/roi/">ukubona-llc.github.io/roi</a>.</p></footer>
 <script>
 (function(){
@@ -343,7 +377,7 @@ function show(name,el){panels.forEach(function(p){p.hidden=p.dataset.p!==name});
 tiles.forEach(function(t){t.setAttribute('aria-current',t.dataset.p===name?'page':'false')});
 if(el&&el.scrollIntoView)el.scrollIntoView();else window.scrollTo(0,0);setPop(false)}
 function route(){var id=decodeURIComponent(location.hash.slice(1)),el=id&&document.getElementById(id),
-p=el&&el.closest('.panel');show(p?p.dataset.p:'roi',p&&el!==p&&!/^(roi|i|ii|iii)$/.test(id)?el:null)}
+p=el&&el.closest('.panel');show(p?p.dataset.p:'roi',p&&el!==p&&!/^(roi|i|ii|iii|marley)$/.test(id)?el:null)}
 function setPop(o){pop.hidden=!o;wb.setAttribute('aria-expanded',o)}
 wb.addEventListener('click',function(e){e.stopPropagation();setPop(pop.hidden)});
 document.addEventListener('click',function(e){if(!pop.contains(e.target))setPop(false)});
