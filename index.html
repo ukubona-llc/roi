@@ -91,6 +91,28 @@ a{text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s}a
 footer{padding-top:8px}
 ::-webkit-scrollbar{height:8px;width:10px}::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
 @media (prefers-reduced-motion:reduce){.panel,.fig svg polyline{animation:none}.fig svg polyline{stroke-dashoffset:0}.ib,.tile{transition:none}}
+/* ===== Structure layer: color-coded stages (additive) ===== */
+.stages,.flow{display:grid;gap:12px;margin:1.3em 0}
+.stage{--c:var(--acc);display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start;padding:14px 16px;border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:5px solid var(--c);border-radius:14px;background:linear-gradient(100deg,color-mix(in srgb,var(--c) 12%,var(--card)),var(--card) 72%);box-shadow:var(--shadow);transition:transform .2s}
+.stage:hover{transform:translateX(4px)}
+.stage .num{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font:800 1.15rem var(--fd);color:var(--c);border:2px solid var(--c);background:color-mix(in srgb,var(--c) 14%,var(--bg))}
+.stage .kick{font:700 .72rem var(--fd);letter-spacing:.13em;text-transform:uppercase;color:var(--c)}
+.stage .nm{font:700 1.3rem/1.25 var(--fd);color:var(--ink);margin:.1em 0 .4em}
+.stage .role{display:inline-block;font:600 .78rem var(--fd);padding:2px 11px;border-radius:999px;background:color-mix(in srgb,var(--c) 16%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);margin-left:.55em;vertical-align:middle;color:var(--ink)}
+.stage .q{margin:0;max-width:none;font-style:italic;color:var(--mute);font-size:.98rem;line-height:1.5}
+.stage.prime{--c:var(--sun);background:linear-gradient(100deg,color-mix(in srgb,var(--sun) 18%,var(--card)),var(--card) 75%)}
+.arr{text-align:center;color:var(--sun);font:700 1.3rem/1 var(--fd)}
+.routes{padding:14px;border:1px dashed var(--mute);border-radius:14px}
+.rlab{font:700 .74rem var(--fd);letter-spacing:.13em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stage.mini{grid-template-columns:1fr;justify-items:center;text-align:center;gap:6px;padding:12px 8px;border-left:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-top:4px solid var(--c)}
+.stage.mini:hover{transform:translateY(-3px)}.stage.mini .nm{margin:0}
+.routes .note{margin:12px 0 0;max-width:none;color:var(--mute);font-style:italic;font-size:.95rem}
+.flow-title{font:700 .8rem var(--fd);letter-spacing:.13em;text-transform:uppercase;color:var(--acc);margin-top:1.6em}
+tr.st td:first-child{color:var(--c);box-shadow:inset 4px 0 0 var(--c)}
+tr.st:hover{background:color-mix(in srgb,var(--c) 13%,transparent)}
+@media (max-width:540px){.rgrid{grid-template-columns:1fr}.stage{grid-template-columns:44px 1fr}.stage .num{width:42px;height:42px}}
+@media (prefers-reduced-motion:reduce){.stage{transition:none}}
 </style>
 <script>
   window.MathJax = {
@@ -474,6 +496,41 @@ try{localStorage.setItem('roi-theme',t)}catch(e){}}
 tb.setAttribute('aria-pressed',root.dataset.theme==='dark');
 tb.addEventListener('click',function(){theme(root.dataset.theme==='dark'?'light':'dark')});
 window.addEventListener('hashchange',route);route();
+})();
+</script>
+<script>
+(function(){
+var C={I:'#5B8DEF',II:'#2FB8A0',III:'#E0A526',IV:'#E5658A',V:'#9B7BF0'};
+function T(e){return e.textContent.trim()}
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function card(key,kick,name,role,q,cls){var d=mk('div','stage'+(cls?' '+cls:''));if(C[key])d.style.setProperty('--c',C[key]);
+ d.appendChild(mk('div','num',key));var b=mk('div','body');if(kick)b.appendChild(mk('div','kick',kick));
+ var n=mk('div','nm',name);if(role)n.appendChild(mk('span','role',role));b.appendChild(n);if(q)b.appendChild(mk('p','q',q));d.appendChild(b);return d}
+[].forEach.call(document.querySelectorAll('td:first-child'),function(td){var m=/^(I|II|III|IV|V)\./.exec(T(td));if(m){td.parentNode.classList.add('st');td.parentNode.style.setProperty('--c',C[m[1]])}});
+function after(id,stop){var h=document.getElementById(id),ps=[];if(!h)return null;var n=h.nextElementSibling;while(n&&n.tagName==='P'&&!(stop&&stop.test(T(n)))){ps.push(n);n=n.nextElementSibling}return ps}
+try{
+var ps=after('the-five-stages-of-intelligence-routing',/^But I think/);
+if(ps&&ps.length===17){var wrap=mk('div','stages'),i=0,ok=true;
+ while(i<ps.length&&ok){var a=T(ps[i]),m=/^(I|II|III|IV|V)\s·\s(.+)$/.exec(a);
+  if(m&&ps[i+2]){var parts=T(ps[i+1]).split(' — ');wrap.appendChild(card(m[1],m[2],parts[0],parts[1]||'',T(ps[i+2])));i+=3}
+  else{var p=/^I′\s—\s(.+)$/.exec(a);if(p&&ps[i+1]){wrap.appendChild(card('I′',p[1],'Updated Interiority','',T(ps[i+1]),'prime'));i+=2}else ok=false}}
+ if(ok&&wrap.children.length===6){ps[0].parentNode.insertBefore(wrap,ps[0]);ps.forEach(function(e){e.remove()})}}
+}catch(e){}
+try{
+var q=after('the-real-client-facing-architecture');
+if(q&&q.length===16&&T(q[1])==='A request enters the broker'){var r=q.slice(2);
+ if(r.length===14&&/^I\./.test(T(r[0]))){var flow=mk('div','flow');
+  flow.appendChild(card('I','Request in',T(r[0]).replace(/^I\.\s*/,''),'',T(r[1])));
+  flow.appendChild(mk('div','arr','↓'));
+  var rt=mk('div','routes');rt.appendChild(mk('div','rlab','Candidate routes'));var g=mk('div','rgrid');
+  [[3,4],[5,6],[7,8]].forEach(function(x){g.appendChild(card(T(r[x[0]]),'',T(r[x[1]]),'','','mini'))});
+  rt.appendChild(g);rt.appendChild(mk('p','note',T(r[9])));flow.appendChild(rt);
+  flow.appendChild(mk('div','arr','↓'));
+  flow.appendChild(card('V','Decision',T(r[10]).replace(/^V\.\s*/,''),'',T(r[11])));
+  flow.appendChild(mk('div','arr','↓'));
+  flow.appendChild(card('I′','Feedback',T(r[12]).replace(/^I′\.\s*/,''),'',T(r[13]),'prime'));
+  q[1].classList.add('flow-title');q[1].parentNode.insertBefore(flow,q[2]);r.forEach(function(e){e.remove()})}}
+}catch(e){}
 })();
 </script>
 </body>
