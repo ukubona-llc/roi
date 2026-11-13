@@ -301,7 +301,7 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 <div class="tw"><table>
 <thead><tr><th>Stage</th><th>Role</th><th>What happens</th></tr></thead><tbody>
 <tr><td>I. Task / Prompt</td><td>Principal</td><td>The initial user intent, system trigger, or decomposed sub-goal enters the pipeline with specific constraints, context, and success criteria.</td></tr>
-<tr><td>II. Router</td><td>Control plane</td><td>Analyzes the task's semantic complexity, domain, and resource requirements, dispatching it to the optimal execution path.</td></tr>
+<tr><td>II. Router / Scout</td><td>Control plane</td><td>Analyzes the task's semantic complexity, domain, and resource requirements, dispatching it to the optimal execution path.</td></tr>
 <tr><td>III. Agents / LLM Subsets</td><td>Workers</td><td>Specialized worker models, tools, or autonomous sub-agents execute their assigned slices of the task in parallel or in sequence.</td></tr>
 <tr><td>IV. Collisions</td><td>Conflict</td><td>Because multiple agents operate concurrently or draw from different knowledge bases, their outputs, state mutations, or tool calls inevitably clash (contradictory facts, race conditions, overlapping edits).</td></tr>
 <tr><td>V. Decisions (→ I′)</td><td>Arbiter</td><td>A resolution mechanism, such as a consensus protocol, critic model, or deterministic arbiter, evaluates the collisions, commits the verified state, and synthesizes the refined prompt or next-step task (I′).</td></tr>
