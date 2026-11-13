@@ -189,7 +189,32 @@ footer{max-width:800px;margin:0 auto;padding:0 20px 40px;color:var(--mute);font-
 <li>Refuses to commit because evidence is insufficient?</li>
 </ul>
 <p>This is not primarily an LLM problem. It is a routing policy problem under uncertainty and resource constraints.</p>
-<p>And I would make that the next Ukubona prototype: a single client request, five possible networks, explicit routing decisions, and a visible ledger explaining why each route was activated or bypassed.</p></section><section class="panel" data-p="ii" hidden><h1 id="ii">II</h1><h1 id="structural-resemblance-historical-transmission">Structural Resemblance, Historical Transmission</h1>
+<p>And I would make that the next Ukubona prototype: a single client request, five possible networks, explicit routing decisions, and a visible ledger explaining why each route was activated or bypassed.</p>
+<hr>
+<h2 id="closed-loop-lifecycle">The closed-loop execution lifecycle</h2>
+<p>This sequence outlines a closed-loop multi-agent execution lifecycle. Instead of treating an AI prompt as a one-way street, it models intelligence as an iterative feedback system where conflicts are actively resolved and fed back into the next task state (I → I′).</p>
+<h3 id="the-five-stage-intelligence-loop">The 5-stage intelligence loop</h3>
+<div class="tw"><table>
+<thead><tr><th>Stage</th><th>Role</th><th>What happens</th></tr></thead><tbody>
+<tr><td>I. Task (I)</td><td>Principal</td><td>The initial user intent, system trigger, or decomposed sub-goal enters the pipeline with specific constraints, context, and success criteria.</td></tr>
+<tr><td>II. Router</td><td>Control plane</td><td>Analyzes the task's semantic complexity, domain, and resource requirements, dispatching it to the optimal execution path.</td></tr>
+<tr><td>III. Agents</td><td>Workers</td><td>Specialized worker models, tools, or autonomous sub-agents execute their assigned slices of the task in parallel or in sequence.</td></tr>
+<tr><td>IV. Collisions</td><td>Conflict</td><td>Because multiple agents operate concurrently or draw from different knowledge bases, their outputs, state mutations, or tool calls inevitably clash (contradictory facts, race conditions, overlapping edits).</td></tr>
+<tr><td>V. Decisions (→ I′)</td><td>Arbiter</td><td>A resolution mechanism, such as a consensus protocol, critic model, or deterministic arbiter, evaluates the collisions, commits the verified state, and synthesizes the refined prompt or next-step task (I′).</td></tr>
+</tbody></table></div>
+<h3 id="how-collisions-are-resolved">How collisions are resolved in stage IV → V</h3>
+<div class="tw"><table>
+<thead><tr><th>Collision type</th><th>Root cause</th><th>Decision mechanism (→ I′)</th></tr></thead><tbody>
+<tr><td>Semantic / Factual</td><td>Two agents return conflicting answers or hallucinations.</td><td><strong>Judge / Critic Agent:</strong> scores outputs against ground truth or a rubric to pick a winner.</td></tr>
+<tr><td>Resource / Tool</td><td>Parallel agents try to write to the same file or API simultaneously.</td><td><strong>State Lock / Queue:</strong> serializes execution and merges changes sequentially.</td></tr>
+<tr><td>Goal Drift</td><td>Sub-agents optimize for local steps that violate the global constraint.</td><td><strong>Constraint Re-anchoring:</strong> prunes off-track branches and reformulates I′ with stricter guardrails.</td></tr>
+<tr><td>Confidence Tie</td><td>The router lacks a clear high-confidence path for a sub-task.</td><td><strong>Escalation / Human-in-the-Loop:</strong> routes the collision to a frontier model or pauses for user input.</td></tr>
+</tbody></table></div>
+<h3 id="why-the-i-to-i-prime-loop-matters">Why the I → I′ loop matters</h3>
+<ul>
+<li><strong>Self-correction:</strong> prevents single-pass failures by catching hallucinations and logic errors during the collision phase, before final output.</li>
+<li><strong>Dynamic adaptation:</strong> each cycle updates the state (I′), allowing the router to shift strategies mid-flight, such as switching from fast, parallel worker agents to a single deep-reasoning model if collisions spike.</li>
+</ul></section><section class="panel" data-p="ii" hidden><h1 id="ii">II</h1><h1 id="structural-resemblance-historical-transmission">Structural Resemblance, Historical Transmission</h1>
 <p><em>Session note · 12 November 2026</em></p>
 <p>The Epilogue's Agent-Space-Time formulation gives us the language for this question:</p>
 <p>\[
