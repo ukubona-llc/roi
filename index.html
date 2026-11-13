@@ -113,6 +113,9 @@ tr.st td:first-child{color:var(--c);box-shadow:inset 4px 0 0 var(--c)}
 tr.st:hover{background:color-mix(in srgb,var(--c) 13%,transparent)}
 @media (max-width:540px){.rgrid{grid-template-columns:1fr}.stage{grid-template-columns:44px 1fr}.stage .num{width:42px;height:42px}}
 @media (prefers-reduced-motion:reduce){.stage{transition:none}}
+/* ===== Resemblance case study: paired videos (additive) ===== */
+.vpair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.4em 0}.vp{margin:0}.vp .video{margin:0 0 .4em}.vp figcaption{color:var(--mute);font-size:.88rem;line-height:1.4}
+@media (max-width:620px){.vpair{grid-template-columns:1fr}}
 </style>
 <script>
   window.MathJax = {
@@ -333,7 +336,77 @@ H_2:\quad \text{Inheritance / Transmission}
 <p><strong>Do not mistake resemblance for ancestry. But do not mistake the absence of demonstrated ancestry for evidence of independent convergence.</strong></p>
 <p>The Epilogue's warning about premature structural closure applies in both directions. Pattern recognition is a hypothesis generator, not a historical verdict.</p>
 <p><em>Reference architecture: <a href="https://ukubona-llc.github.io/parang/#epi-top">Ukubona · Parang · Epilogue</a></em></p>
-<p>--ChatGPT</p></section><section class="panel" data-p="iii" hidden><h1 id="iii">III</h1><p>So we have HipHop &amp; Parang both manifesting a fusion between Latina &amp; Afro culture in the American and Caribbean</p>
+<p>--ChatGPT</p>
+<hr>
+<h1 id="rain-double-back">Rain → Double Back: the rootless C♯7</h1>
+<p><em>Session note · 13 November 2026 · appended; nothing above this line was edited</em></p>
+<p class="lead">One sonority carries this case: <strong>C♯7(♯11, ♭13) with root and fifth deleted</strong>, the tritone substitute of G7, voiced <strong>F–G–A–B</strong> (the ♯11 may be silent). Written D♭7 in a G-major chart, it is the same four pitches as G9 without its fifth. Which name is true is decided by the bass.</p>
+<div class="vpair">
+<figure class="vp"><div class="video"><iframe src="https://www.youtube.com/embed/QQyXHfOy1UU" title="SWV, Rain (official music video)" loading="lazy" allowfullscreen></iframe></div><figcaption>SWV, “Rain” (1997). Produced by Brian Alexander Morgan; built on Jaco Pastorius’s “Portrait of Tracy”.</figcaption></figure>
+<figure class="vp"><div class="video"><iframe src="https://www.youtube.com/embed/MXs3vD-A4gs" title="Coco Jones, Double Back" loading="lazy" allowfullscreen></iframe></div><figcaption>Coco Jones, “Double Back”. Samples “Rain” with reverence (orchestrator’s report). <a href="https://www.youtube.com/watch?v=MXs3vD-A4gs&amp;t=142s" target="_blank" rel="noopener">Open at 2:22</a>.</figcaption></figure>
+</div>
+<p><strong>Provenance.</strong> Gemini has YouTube access and supplied the chord readings of the videos. The orchestrator supplied the chart for “Double Back” and the ear-check. Claude cannot watch or hear the videos, so its part was correction at the level of pitch spelling, function and voice leading. Anything about the recordings themselves is marked as reported, not verified.</p>
+
+<h2 id="rain-gemini-berklee">Gemini’s reading of “Rain”, with Berklee analysis and corrections</h2>
+<div class="tw"><table>
+<thead><tr><th>Section</th><th>Gemini’s symbols</th><th>Berklee analysis</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Verse A</td><td>Cmaj7 → Gmaj7 → Emaj7</td><td>(in C) IΔ7 → VΔ7 → IIIΔ7</td><td>Flag. Emaj7 contains G♯, foreign to both C and G major. The orchestrator’s chart has Gmaj7/E ≡ Em9 (E–G–B–D–F♯) in this slot. A conflation of G and G♯ is likely; check by ear.</td></tr>
+<tr><td>Verse B</td><td>Cmaj7 → Gmaj7 → F♯m7</td><td>(in C) IΔ7 → VΔ7 → ♯ivm7</td><td>Flag. F♯m7 carries C♯. The diatonic F♯ chord in G major is F♯ø7 (F♯–A–C–E), which is also what Gemini’s later Locrian-leaning reading uses.</td></tr>
+<tr><td>Chorus loop</td><td>C → Em7 → Am7 → G/B</td><td>I → iii7 → vi7 → V/3</td><td>Consistent. C major and G major share every pitch except F/F♯, so C-centred and G-centred readings can coexist.</td></tr>
+<tr><td>Chorus passing chord</td><td>A7(♭9)/C♯, later C♯m7(♭5)</td><td>V7(♭9)/ii ≡ C♯°7 (C♯–E–G–B♭), versus C♯ø7 (C♯–E–G–B) ≡ rootless A9, both → ii9</td><td>Two different chords, not one. The B♭ is the ♭9 of A7; the B♮ is its 9th. Gemini slid between the names. Both are tritone shells on C♯–G.</td></tr>
+<tr><td>Tritone-sub variant</td><td>C♯7alt, “subV7/vi”</td><td>♭II7 ≡ subV7/I (when it falls to C)</td><td>Corrected. C♯7 falling by semitone to C is the substitute for G7 → C, so subV7/I. The substitute for V7/vi would be B♭7.</td></tr>
+<tr><td>Turnaround</td><td>Dm9 → G13sus4 → G7(♭9)</td><td>ii9 → V13sus4 → V7(♭9)</td><td>Consistent.</td></tr>
+</tbody></table></div>
+
+<h2 id="coco-gemini-berklee">Gemini’s three passes on “Double Back”</h2>
+<div class="tw"><table>
+<thead><tr><th>Pass</th><th>Claim</th><th>Berklee analysis</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Cmaj7 → Gmaj7 → Bm7 → Em9</td><td>(E minor) ♭VIΔ7 → ♭IIIΔ7 → v7 → i9</td><td>Superseded by the chart: it has no C-bass slash chords, no Gmaj7/E, no B7sus and no tritone-sub turnaround.</td></tr>
+<tr><td>2</td><td>Bass G–F♯–E–D–E, “F♯ as tritone sub”</td><td>(E minor) ♭3–2–1–♭7–1; (G major) 1–7–6–5–6</td><td>The bass walk is the orchestrator’s report; it is not placed in the chart. The “tritone sub” label was wrong, and Gemini conceded it: F♯7 substitutes for C7 (shell E–B♭), while the shell of G7 is B–F, shared with D♭7/C♯7.</td></tr>
+<tr><td>3</td><td>The orchestrator’s chart, praised as “masterclass voice leading”</td><td>see next table</td><td>Gemini gave the ♭13 as B♭. It is A (B♭♭). The pitches are F, G, A, B, which is what makes the chord whole-tone; B♭ would break that.</td></tr>
+</tbody></table></div>
+
+<h2 id="coco-chart-berklee">The chart, in G major, common time</h2>
+<div class="tw"><table>
+<thead><tr><th>Bar</th><th>Chart (one beat each)</th><th>Berklee analysis (G)</th><th>Bass</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>G/C – Gmaj7 – Gmaj7/E – G/C</td><td>IVΔ9(no3) – IΔ7 – IΔ7/vi ≡ vi9 – IVΔ9(no3)</td><td>C–G–E–C</td></tr>
+<tr><td>2</td><td>G/C – Gmaj7 – B7sus – B7sus</td><td>IVΔ9(no3) – IΔ7 – V7sus4/vi – V7sus4/vi</td><td>C–G–B–B</td></tr>
+<tr><td>3</td><td>as bar 1</td><td>as bar 1</td><td>C–G–E–C</td></tr>
+<tr><td>4</td><td>G/C – Gmaj7 – D9 – D♭7(♯11, ♭13), no root, no 5th</td><td>IVΔ9(no3) – IΔ7 – V9 – <strong>subV7/IV ≡ sub I7</strong> → loop</td><td>C–G–D–D♭ → C</td></tr>
+</tbody></table></div>
+<p>G/C is C–G–B–D, a Cmaj9 with no third, so the home chord is neither major nor minor. The D♭7 is the substitute for G7 → C, which is I7 → IV in this key. That is why the loop feels at home in both G and C.</p>
+
+<h2 id="csharp7-anatomy">Anatomy of the chord</h2>
+<div class="tw"><table>
+<thead><tr><th>Pitch</th><th>As D♭7 (≡ C♯7)</th><th>As G</th><th>In the voicing</th></tr></thead>
+<tbody>
+<tr><td>D♭ / C♯</td><td>root</td><td>♭5</td><td>deleted</td></tr>
+<tr><td>F</td><td>3rd</td><td>♭7</td><td>kept</td></tr>
+<tr><td>A♭ / G♯</td><td>5th</td><td>♭9</td><td>deleted</td></tr>
+<tr><td>C♭ = B</td><td>♭7</td><td>3rd</td><td>kept</td></tr>
+<tr><td>G</td><td>♯11</td><td>root</td><td>optional (may be silent)</td></tr>
+<tr><td>B♭♭ = A</td><td>♭13</td><td>9th</td><td>kept</td></tr>
+</tbody></table></div>
+<p><strong>The bass decides the name.</strong> Over G the pitches F–G–A–B are G9 without its fifth. Over D♭ or C♯ they are D♭7(♯11, ♭13). The chart picks D♭, and the bass slide D → D♭ → C turns a G-flavoured cloud into a tritone substitute resolving by half step.</p>
+<p><strong>Voice leading.</strong> D9’s shell F♯–C slides down a semitone to F–B, and A is the common tone. Into G/C (C–G–B–D), G and B are common tones, and F and A each move at most a whole step (F → G; A → G or B). The classic subV resolution F → E would need an E, and the landing has no third, so that E is withheld.</p>
+
+<h2 id="csharp7-debussy">The Debussy link</h2>
+<p>F–G–A–B sits inside one whole-tone collection, D♭–E♭–F–G–A–B. That collection maps to itself under every even transposition, including the tritone. So a whole-tone sonority has the same pitches under its G-name and its D♭-name, and a tritone substitution inside it changes only the label. The full G7♭5 (G–B–D♭–F) is the one dominant seventh that is its own tritone substitute (the French-sixth set class). That is the non-trivial part: the substitute is a symmetry of the Impressionist collection, not an add-on.</p>
+<p>Debussy’s <em>Voiles</em> (Préludes, Book I) is built mostly on the whole-tone scale, which has no leading tone and no perfect fifth, so nothing points firmly anywhere. The gospel and neo-soul chord keeps what Debussy dissolves: the F–B tritone is still inside the cloud, so the float has a way home.</p>
+
+<h2 id="csharp7-softmax">The argument, archived</h2>
+<ol>
+<li><strong>Constructal routing.</strong> Replacing the 7-semitone bass leap G → C with the 1-semitone slide D♭ → C is the lowest-impedance path across the circle of fifths in 12-TET. This was Gemini’s framing, adopted by the orchestrator.</li>
+<li><strong>SoftMax then ArgMax.</strong> Read the chord as a distribution over next moves: \[ p_i=\frac{e^{z_i/T}}{\sum_j e^{z_j/T}} \] The whole-tone cloud is high \(T\), mass spread over many resolutions. The F–B tritone lowers \(T\) a little. The landing on G/C is the ArgMax. Holding the chord longer keeps \(T\) high, so the collapse hits harder.</li>
+<li><strong>Its place in Black music.</strong> The orchestrator’s claim is that this is the most important chord in all of Black music, and that its links to Debussy are non-trivial. The pitch-level support is above. The historical claim needs carriers (recordings, players, repertoire) and is treated as H₂, in the terms of this tab.</li>
+<li><strong>Coco’s gesture at 2:22–2:23.</strong> The orchestrator reports that her gesture there coincides with this chord. This is archived as testimony. Claude cannot watch the video; readers can check it at the timestamp above.</li>
+</ol>
+<p><strong>Not verified:</strong> Gemini’s symbols for “Rain” as heard; that “Double Back” samples “Rain” (orchestrator’s report); the G–F♯–E–D–E bass walk; the 2:22 gesture. <strong>Checked at the pitch level:</strong> spellings, the whole-tone membership, the tritone symmetry and the voice leading above.</p>
+<p>--Claude, correcting Gemini</p>
+</section><section class="panel" data-p="iii" hidden><h1 id="iii">III</h1><p>So we have HipHop &amp; Parang both manifesting a fusion between Latina &amp; Afro culture in the American and Caribbean</p>
 <p>What sayest thou Gemini and Claude?</p>
 <h2 id="gemini">Gemini</h2>
 <p>The convergence of <strong>Parang</strong> and <strong>Hip-Hop</strong> as twin engines of Afro-Latin cultural synthesis in the Americas and the Caribbean reveals a profound structural truth about how diasporic music operates.</p>
