@@ -300,9 +300,9 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 <h3 id="the-five-stage-intelligence-loop">The 5-stage intelligence loop</h3>
 <div class="tw"><table>
 <thead><tr><th>Stage</th><th>Role</th><th>What happens</th></tr></thead><tbody>
-<tr><td>I. Task (I)</td><td>Principal</td><td>The initial user intent, system trigger, or decomposed sub-goal enters the pipeline with specific constraints, context, and success criteria.</td></tr>
+<tr><td>I. Task / Prompt</td><td>Principal</td><td>The initial user intent, system trigger, or decomposed sub-goal enters the pipeline with specific constraints, context, and success criteria.</td></tr>
 <tr><td>II. Router</td><td>Control plane</td><td>Analyzes the task's semantic complexity, domain, and resource requirements, dispatching it to the optimal execution path.</td></tr>
-<tr><td>III. Agents</td><td>Workers</td><td>Specialized worker models, tools, or autonomous sub-agents execute their assigned slices of the task in parallel or in sequence.</td></tr>
+<tr><td>III. Agents / LLM Subsets</td><td>Workers</td><td>Specialized worker models, tools, or autonomous sub-agents execute their assigned slices of the task in parallel or in sequence.</td></tr>
 <tr><td>IV. Collisions</td><td>Conflict</td><td>Because multiple agents operate concurrently or draw from different knowledge bases, their outputs, state mutations, or tool calls inevitably clash (contradictory facts, race conditions, overlapping edits).</td></tr>
 <tr><td>V. Decisions (→ I′)</td><td>Arbiter</td><td>A resolution mechanism, such as a consensus protocol, critic model, or deterministic arbiter, evaluates the collisions, commits the verified state, and synthesizes the refined prompt or next-step task (I′).</td></tr>
 </tbody></table></div>
@@ -679,7 +679,7 @@ function group(panel){var kids=[].slice.call(panel.children),cur=null,lazy='pl',
   if(t==='H1'){if(!/^(ii|iii|future-project-bob-marley)$/.test(id))el.classList.add('chap');cur=null;lazy='pl';ci=0;return}
   if(t==='HR'){cur=null;lazy='pl';return}
   if(t==='H2'){if(id==='gemini'||id==='claude'){var g=id==='gemini';el.classList.add('who');el.dataset.i=g?'G':'C';col=g?C.I:C.III;el.style.setProperty('--c',col);cur=null;lazy='sc speaker';return}
-   cur=sec('sc'+(/^\d+\./.test(T(el))?'':' nu'),el);cur.appendChild(el);lazy='pl';return}
+   cur=sec('sc'+(/^\d+\./.test(T(el))?The 5-stage intelligence loop'':' nu'),el);cur.appendChild(el);lazy='pl';return}
   if(el.classList.contains('meta')){cur=null;return}
   if(el.dataset&&el.dataset.split){cur=sec('sc',el);cur.appendChild(mk('div','kk',el.dataset.split));cur.appendChild(el);lazy='pl';return}
   if(!cur){cur=sec(lazy,el,/speaker/.test(lazy)?col:null);lazy='pl'}
