@@ -157,6 +157,11 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 @media (max-width:540px){.sc{padding:14px 14px 4px}.hyp{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.sec{animation:none}}
 .who.w2::before{font-size:.76rem;letter-spacing:-.02em}
+/* ===== Case study: ATL (additive) ===== */
+.fig svg.atl{max-width:100%}
+.fig svg.atl text{font-family:var(--fd)}
+.atl .mu{font:500 14px var(--fd);fill:var(--mute)}
+.panel[data-p=atl] hr{display:none}
 </style>
 <script>
   window.MathJax = {
@@ -173,7 +178,7 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 <button class="ib" id="tb" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg></button>
 <button class="ib" id="wb" type="button" aria-label="Open the page grid" aria-expanded="false" aria-controls="pop"><span class="waf"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button>
-<nav id="pop" aria-label="Pages" hidden><a class="tile" data-p="roi" href="#roi"><b>ROI</b><span>Return</span></a><a class="tile" data-p="i" href="#i"><b>I</b><span>Routing</span></a><a class="tile" data-p="ii" href="#ii"><b>II</b><span>Resemblance</span></a><a class="tile" data-p="iii" href="#iii"><b>III</b><span>Gemini, Claude</span></a><a class="tile" data-p="marley" href="#marley"><b>M</b><span>Future: Marley</span></a><a class="tile" href="https://ukubona-llc.github.io/parang/"><b>P</b><span>Parang, opens site</span></a></nav>
+<nav id="pop" aria-label="Pages" hidden><a class="tile" data-p="roi" href="#roi"><b>ROI</b><span>Return</span></a><a class="tile" data-p="i" href="#i"><b>I</b><span>Routing</span></a><a class="tile" data-p="ii" href="#ii"><b>II</b><span>Resemblance</span></a><a class="tile" data-p="iii" href="#iii"><b>III</b><span>Gemini, Claude</span></a><a class="tile" data-p="marley" href="#marley"><b>M</b><span>Future: Marley</span></a><a class="tile" data-p="atl" href="#atl"><b>ATL</b><span>Case study</span></a><a class="tile" href="https://ukubona-llc.github.io/parang/"><b>P</b><span>Parang, opens site</span></a></nav>
 </header>
 <main><section class="panel" data-p="roi"><h1 id="roi">Return on investment</h1>
 <p class="lead">I paid for this by torturing my dopamine-marinated brain with salience in everything I saw for two to three years, under one constraint: whatever I kept had to compress into a pentadic operator. This page is the return.</p>
@@ -726,7 +731,36 @@ H_2:\quad \text{Inheritance / Transmission}
 </tr>
 </tbody>
 </table></div>
-<p>The discipline of II holds here too. A minor close resembling the Caribbean sources does not establish a shared ancestry, and a missing link to flamenco does not establish convergence. Carriers on the Jamaican side, such as records, radio, performers and repertoire, are to be investigated rather than assumed. Find one and $H_2$ gains weight. Find the same close recurring where there was no contact and $H_1$ does. Later, we shall address a long historical trajectory parallel: from Nkonte, Malachi, Abimereki, O'John, to Kadi.</p></section></main>
+<p>The discipline of II holds here too. A minor close resembling the Caribbean sources does not establish a shared ancestry, and a missing link to flamenco does not establish convergence. Carriers on the Jamaican side, such as records, radio, performers and repertoire, are to be investigated rather than assumed. Find one and $H_2$ gains weight. Find the same close recurring where there was no contact and $H_1$ does. Later, we shall address a long historical trajectory parallel: from Nkonte, Malachi, Abimereki, O'John, to Kadi.</p></section><section class="panel" data-p="atl" hidden><h1 id="atl">Case study: ATL</h1>
+<p class="lead">Twenty years, five residencies, one topology: <strong>o)-(o</strong>. Kampala, Baltimore, Virginia, Staten Island, Nairobi, and back to Kampala as I′. The durations (26, 19, 0.5, 0.3, 0.2) sum to a life of 46 years, and the last four to the 20 years of 2006–2026. Hartsfield–Jackson is the same shape: a curb, an escalator, a flight train, an escalator, a plane.</p>
+<figure class="fig"><svg class="atl" viewBox="0 -40 760 350" role="img" aria-labelledby="atlt"><title id="atlt">The topology o)-(o drawn with sizes proportional to the square root of years: a large circle for Kampala, a large right-bulging arc for Baltimore, a long thin line for Virginia, a small left-bulging arc for Staten Island, a small circle for Nairobi, and a return curve from Nairobi back to Kampala.</title>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--sun)"/></marker></defs>
+<g stroke="var(--mute)" stroke-width="1.5" fill="none" opacity=".7"><path d="M0,60 L42,134"/><path d="M0,175 L29,175"/><path d="M0,290 L42,216"/></g>
+<text x="6" y="46" class="mu">I-85 · the city</text>
+<ellipse cx="100" cy="175" rx="71" ry="71" fill="none" stroke="#5B8DEF" stroke-width="5"/>
+<ellipse cx="100" cy="175" rx="52" ry="52" fill="none" stroke="#5B8DEF" stroke-width="2" stroke-dasharray="5 6"/>
+<text x="100" y="180" text-anchor="middle" class="fn">I′</text>
+<path d="M205,123 A61,61 0 0 1 205,227" fill="none" stroke="#2FB8A0" stroke-width="7" stroke-linecap="round"/>
+<path d="M262,175 L490,175" stroke="#E0A526" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M510,165 A10,10 0 0 0 510,185" fill="none" stroke="#E5658A" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="550" cy="175" rx="10" ry="10" fill="var(--bg)" stroke="#9B7BF0" stroke-width="4"/>
+<g stroke="var(--mute)" stroke-width="1.5" fill="none" opacity=".7"><path d="M558,168 L736,96"/><path d="M560,175 L748,175"/><path d="M558,182 L736,254"/></g>
+<text x="748" y="90" text-anchor="end" class="mu">departing · arriving</text>
+<path d="M550,165 C550,-48 100,-48 100,102" fill="none" stroke="var(--sun)" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="325" y="-14" text-anchor="middle" class="fn">V → I′</text>
+<g text-anchor="middle"><text x="100" y="272" class="fl">I · o</text><text x="100" y="292" class="mu">Kampala · 26</text>
+<text x="215" y="272" class="fl">II · )</text><text x="215" y="292" class="mu">Baltimore · 19</text>
+<text x="350" y="272" class="fl">III · -</text><text x="350" y="292" class="mu">Virginia · 0.5</text></g>
+<g text-anchor="end"><text x="520" y="272" class="fl">IV · (</text><text x="520" y="292" class="mu">Staten Island · 0.3</text></g>
+<g text-anchor="start"><text x="548" y="272" class="fl">V · o</text><text x="548" y="292" class="mu">Nairobi · 0.2</text></g></svg>
+<figcaption>o)-(o as geometry, with area and arc scaled to √years (the two shortest stays are floored to stay visible). The longest line is the shortest stay. The dotted return writes V back to the principal as I′: the same circle, with a new inner ring.</figcaption></figure>
+<div class="sec"><div class="sc" style="--c:#E0A526"><div class="kk">Fit</div><h2 id="atl-fit">Five operators, five flows</h2>
+<div class="tw"><table><thead><tr><th>Operator</th><th>Glyph · place · years</th><th>At the airport</th><th>Carries</th><th>Role</th></tr></thead><tbody><tr><td>I. Interior</td><td>o · Kampala · 26</td><td>Curb and inflows from I-85 and the city</td><td>People</td><td>Intake. Intent enters unfiltered.</td></tr><tr><td>II. Kin</td><td>) · Baltimore · 19</td><td>Escalator from the terminal</td><td>Services</td><td>Plumbing. Carries a person across a threshold, decides nothing.</td></tr><tr><td>III. Constructal</td><td>- · Virginia · 0.5</td><td>The flight train</td><td>Capital</td><td>Flow. One rail that everything crosses; no judgment lives on it.</td></tr><tr><td>IV. Social</td><td>( · Staten Island · 0.3</td><td>Escalator to the gates</td><td>Goods</td><td>Plumbing. Hands what was assembled to the aircraft.</td></tr><tr><td>V. Weights → I′</td><td>o · Nairobi · 0.2</td><td>Planes departing and arriving</td><td>Information</td><td>Allocation. What flies, what stays, and what returns to the curb.</td></tr></tbody></table></div>
+<p>Capital, goods, services, people and information each find a station without being forced. That assignment is one fit, and it is checkable: move any flow to a neighbor and something in the airport has to change shape.</p></div></div>
+<div class="sec"><div class="sc" style="--c:#5B8DEF"><div class="kk">Compression</div><h2 id="atl-compress">Plumbing, flow, interiority, weights</h2><ul class="mc"><li style="--c:#2FB8A0"><strong>Plumbing · II and IV</strong>The two parentheses are one device at two ends of the flow: an escalator. ) lifts a person out of the landside and into the terminal; ( lifts them out of the system and onto the gate. Neither decides where anyone goes, each only carries. That is why 19 years in one and 0.3 in the other is not a contradiction: plumbing is sized by what it must carry, not by how long you stand on it.</li><li style="--c:#E0A526"><strong>Flow · III</strong>The flight train is the longest line in the figure and the shortest stay. Everything passes through it, nothing lives on it. Capital moves at the speed of the line, never at the speed of any one stay.</li><li style="--c:#5B8DEF"><strong>Interiority · I</strong>The curb, where I-85 and the city empty into the airport. Twenty-six years, the largest circle, and the one nothing else can be built without: every inflow is received here and interpreted here, unfiltered.</li><li style="--c:#9B7BF0"><strong>Weights · V → I′</strong>The second o is the planes, departing and arriving. It sits at the far end only because space is linear; in time the loop closes, because every arrival lands at a curb. What flies and what stays is allocated at V, and the result returns as I′: Kampala again, but not the same Kampala.</li></ul></div></div>
+<div class="sec"><div class="sc" style="--c:#9B7BF0"><div class="kk">Consequence</div><h2 id="atl-dictates">What it dictates for client-facing apps</h2>
+<p>A sketch of the stack this topology implies. The point is the shape, and the tools can change.</p><ul class="mc"><li style="--c:#5B8DEF"><strong>I · Intake</strong>The client-facing front end captures the principal’s own context before anything is routed (Vite/React).</li><li style="--c:#2FB8A0"><strong>II · Ingress plumbing</strong>Thin and judgment-free: auth, validation, normalization (FastAPI).</li><li style="--c:#E0A526"><strong>III · Flow rail</strong>A single event spine that all work crosses. No business logic lives on it.</li><li style="--c:#E5658A"><strong>IV · Egress plumbing</strong>Adapters to the outside world, such as connectors, models and payments. They carry, they do not decide.</li><li style="--c:#9B7BF0"><strong>V → I′ · Weights</strong>The router and allocator decide what runs where, and every outcome writes back to the principal’s state.</li></ul></div></div>
+<p>The earlier <a href="https://ukb-dt.github.io/o-o/">o-o table</a> read Kampala as Soil and put the runways there. This case study enters the same five-phase traversal from the landside: the curb at I, the planes at V. The stages are the same, and what changes is which end you walk in from.</p></section></main>
 <footer><hr><p>Reference architecture: <a href="https://ukubona-llc.github.io/parang/">Ukubona · Parang</a> · <a href="https://ukubona-llc.github.io/parang/#epi-top">Epilogue</a>. Machine-generated commentary is preserved verbatim, except where a section says it was compressed. Hosted at <a href="https://ukubona-llc.github.io/roi/">ukubona-llc.github.io/roi</a>.</p></footer>
 <script>
 (function(){
@@ -737,7 +771,7 @@ function show(name,el){panels.forEach(function(p){p.hidden=p.dataset.p!==name});
 tiles.forEach(function(t){t.setAttribute('aria-current',t.dataset.p===name?'page':'false')});
 if(el&&el.scrollIntoView)el.scrollIntoView();else window.scrollTo(0,0);setPop(false)}
 function route(){var id=decodeURIComponent(location.hash.slice(1)),el=id&&document.getElementById(id),
-p=el&&el.closest('.panel');show(p?p.dataset.p:'roi',p&&el!==p&&!/^(roi|i|ii|iii|marley)$/.test(id)?el:null)}
+p=el&&el.closest('.panel');show(p?p.dataset.p:'roi',p&&el!==p&&!/^(roi|i|ii|iii|marley|atl)$/.test(id)?el:null)}
 function setPop(o){pop.hidden=!o;wb.setAttribute('aria-expanded',o)}
 wb.addEventListener('click',function(e){e.stopPropagation();setPop(pop.hidden)});
 document.addEventListener('click',function(e){if(!pop.contains(e.target))setPop(false)});
