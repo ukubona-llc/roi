@@ -164,6 +164,13 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 .panel[data-p=atl] hr,.panel[data-p=ayesha] hr,.panel[data-p=abcde] hr{display:none}
 .dn{color:#E5658A;font-weight:700}.up{color:#2FB8A0;font-weight:700}
 .fig img{width:100%;height:auto;display:block;border-radius:12px}
+/* ===== Observation tables: wordy first column gets the width (additive) ===== */
+table.obs{table-layout:fixed;min-width:640px}
+table.obs td:first-child{white-space:normal;font:500 1rem/1.5 var(--fb);color:var(--ink)}
+table.obs td,table.obs th{overflow-wrap:anywhere}
+table.obs td:not(:first-child){font-size:.9rem;line-height:1.45}
+table.obs3 th:nth-child(1){width:46%}table.obs3 th:nth-child(2){width:15%}table.obs3 th:nth-child(3){width:39%}
+table.obs4 th:nth-child(1){width:34%}table.obs4 th:nth-child(2){width:18%}table.obs4 th:nth-child(3){width:18%}table.obs4 th:nth-child(4){width:30%}
 /* ===== Lipstick on a Pig: paired stills (additive) ===== */
 .vp img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);margin:0 0 .4em}
 </style>
@@ -522,7 +529,7 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 
 <h3 id="lipstick-closure">Closure on the 9:46 test</h3>
 <p><strong>Provenance.</strong> Claude cannot watch or hear the video and has not seen the transcript Grok describes. Every statement about the audio below is Grok’s or the orchestrator’s, and I have not verified either. What I can check is how the two accounts line up and whether the coding follows from them.</p>
-<div class="tw"><table>
+<div class="tw"><table class="obs obs4">
 <thead><tr><th>Observation</th><th>Orchestrator</th><th>Grok</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>She delivers the blunt line at about 3:23:00</td><td>Yes (note 1 above)</td><td>Yes, with “Bullshit” on both sides of it</td><td>Agreed</td></tr>
@@ -552,7 +559,7 @@ p.sig span{display:inline-block;padding:3px 14px;border:1px solid color-mix(in s
 <h3 id="lipstick-close">Addendum: the close, and the sonata</h3>
 <p><em>Session note · 20 November 2026 · appended; nothing above this line was edited</em></p>
 <p class="lead">The orchestrator supplied what happens in the last minutes, after Grok’s reading. Observations come first and interpretations after, because the two have different standing. Every observation about the video is the orchestrator’s report; Claude cannot watch or hear it and has not seen the transcript.</p>
-<div class="tw"><table>
+<div class="tw"><table class="obs obs3">
 <thead><tr><th>Observation</th><th>Source</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>The host is after a punchy ending, says so, and the closing question is whether her butt is real</td><td>Orchestrator</td><td>Grok corroborates the topic (“whether her body is natural”) and a stated need for a good ending. “Punchy” and the stated aim are the orchestrator’s alone</td></tr>
